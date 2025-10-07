@@ -14,7 +14,7 @@
 		B32142E02E94E3E900DB6CED /* Exceptions for "RealmApp" folder in "RealmApp" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
+				App/Info.plist,
 			);
 			target = B32142CD2E94E3E600DB6CED /* RealmApp */;
 		};
