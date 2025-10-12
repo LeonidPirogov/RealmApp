@@ -10,7 +10,7 @@
         <!--Task Lists-->
         <scene sceneID="fnl-Co-ds7">
             <objects>
-                <tableViewController id="eYb-n0-Ory" sceneMemberID="viewController">
+                <tableViewController id="eYb-n0-Ory" customClass="TaskListViewController" customModule="RealmApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="ep5-BL-ya7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,9 +22,12 @@
                                 <segment title="Date"/>
                                 <segment title="A-Z"/>
                             </segments>
+                            <connections>
+                                <action selector="sortingList:" destination="eYb-n0-Ory" eventType="valueChanged" id="vXg-ag-tgn"/>
+                            </connections>
                         </segmentedControl>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="FCf-fh-v0C" detailTextLabel="ohX-bn-AKI" style="IBUITableViewCellStyleValue1" id="6Qn-PP-OvI">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TaskListCell" textLabel="FCf-fh-v0C" detailTextLabel="ohX-bn-AKI" style="IBUITableViewCellStyleValue1" id="6Qn-PP-OvI">
                                 <rect key="frame" x="0.0" y="82" width="375" height="51"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Qn-PP-OvI" id="heT-ex-2CN">
@@ -63,31 +66,31 @@
             </objects>
             <point key="canvasLocation" x="429" y="-62"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Tasks View Controller-->
         <scene sceneID="a37-mb-9Oq">
             <objects>
-                <tableViewController id="EYg-o0-eee" sceneMemberID="viewController">
+                <tableViewController id="EYg-o0-eee" customClass="TasksViewController" customModule="RealmApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="BKX-1Z-QLV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="pfH-i3-hUs" detailTextLabel="m4x-oy-v5G" style="IBUITableViewCellStyleSubtitle" id="DMm-hs-lRd">
-                                <rect key="frame" x="0.0" y="50" width="375" height="51"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TaskCell" textLabel="pfH-i3-hUs" detailTextLabel="m4x-oy-v5G" style="IBUITableViewCellStyleSubtitle" id="DMm-hs-lRd">
+                                <rect key="frame" x="0.0" y="50" width="375" height="59"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DMm-hs-lRd" id="7nc-dS-Rq5">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="51"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pfH-i3-hUs">
-                                            <rect key="frame" x="16" y="7" width="33" height="20.5"/>
+                                            <rect key="frame" x="16" y="8" width="33" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="m4x-oy-v5G">
-                                            <rect key="frame" x="16" y="27.5" width="53" height="18"/>
+                                            <rect key="frame" x="16" y="31.5" width="53" height="18"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <nil key="textColor"/>

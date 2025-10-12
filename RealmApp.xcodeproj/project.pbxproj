@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		B3C221142E96F44E0055661D /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B3C221132E96F44E0055661D /* RealmSwift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		B32142CE2E94E3E600DB6CED /* RealmApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3C221142E96F44E0055661D /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,7 @@
 			);
 			name = RealmApp;
 			packageProductDependencies = (
+				B3C221132E96F44E0055661D /* RealmSwift */,
 			);
 			productName = RealmApp;
 			productReference = B32142CE2E94E3E600DB6CED /* RealmApp.app */;
@@ -107,6 +113,9 @@
 			);
 			mainGroup = B32142C52E94E3E600DB6CED;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				B3C221102E96F44E0055661D /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = B32142CF2E94E3E600DB6CED /* Products */;
 			projectDirPath = "";
@@ -353,6 +362,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B3C221102E96F44E0055661D /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B3C221132E96F44E0055661D /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B3C221102E96F44E0055661D /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B32142C62E94E3E600DB6CED /* Project object */;
 }
